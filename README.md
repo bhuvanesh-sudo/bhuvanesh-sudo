@@ -1,16 +1,31 @@
-## Hi there 👋
+# Hi, I'm Bhuvanesh
 
-<!--
-**bhuvanesh-sudo/bhuvanesh-sudo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a Computer Science undergraduate focused on building systems that deal with **real world discrepancies, convulated and eccentric ideas that you come up with in random places**. I prefer projects that solve real problems, model real-world constraints, or explore non-trivial design tradeoffs.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## What I'm Working On
+- Intelligent scheduling systems that model institutional constraints   
+- Experimental tools and applications with social impact  
+- Full-stack and systems-oriented side projects
+
+Recent work includes: 
+- Blockchain-based supply chain traceability  
+- Non-custodial digital inheritance protocols  
+- Assistive web applications and experimental chatbot(s)
+
+---
+
+## Tools & Technologies
+- **Languages:** Python, JavaScript, TypeScript, Solidity  
+- **Web:** HTML, CSS, Node.js  
+- **Blockchain:** Ethereum, Smart Contracts  
+- **Systems & Dev:** Linux (Fedora), Git, Docker  
+- **Concepts:** Algorithms, data structures, scheduling, decentralized systems
+
+---
+
+## Reach Me through my socials!
+
+---
+

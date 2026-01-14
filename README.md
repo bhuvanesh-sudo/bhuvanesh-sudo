@@ -4,19 +4,19 @@ I'm a Computer Science undergraduate focused on building systems that deal with 
 
 ---
 
-# What I'm Working On
+## What I'm Working On
 - Intelligent scheduling systems that model institutional constraints   
 - Experimental tools and applications with social impact  
 - Full-stack and systems-oriented side projects
 
-# Recent work includes: 
+## Recent work includes: 
 - Blockchain-based supply chain traceability  
 - Non-custodial digital inheritance protocols  
 - Assistive web applications and experimental chatbot(s)
 
 ---
 
-# Tools & Technologies
+## Tools & Technologies
 - **Languages:** Python, JavaScript, TypeScript, Solidity  
 - **Web:** HTML, CSS, Node.js  
 - **Blockchain:** Ethereum, Smart Contracts  
@@ -25,7 +25,7 @@ I'm a Computer Science undergraduate focused on building systems that deal with 
 
 ---
 
-# Reach Me through my socials!
+## Reach Me through my socials!
 
 ---
 

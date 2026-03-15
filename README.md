@@ -18,10 +18,10 @@ I'm a Computer Science undergraduate focused on building systems that deal with 
 
 ## Tools & Technologies
 - **Languages:** Python, JavaScript, TypeScript, Solidity  
-- **Web:** HTML, CSS, Node.js  
+- **Web:** HTML, CSS, Node.js, React.js, Next.js  
 - **Blockchain:** Ethereum, Smart Contracts  
 - **Systems & Dev:** Linux, Git, Docker  
-- **Concepts:** Algorithms, data structures, scheduling, decentralized systems
+- **Concepts:** Algorithms, Data Structures, Decentralized Systems, Edge Intelligence
 
 ---
 

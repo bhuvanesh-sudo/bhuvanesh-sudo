@@ -32,4 +32,4 @@ Computer Science undergraduate building systems with real constraints — schedu
 
 ## Contact
 
-[Portfolio](https://bhuvanesh-sudo.github.io/portfolio/) · [LinkedIn](https://linkedin.com/in/bhuvanesh-s-0vnu) · [bhuvan1107@gmail.com](mailto:bhuvan1107@gmail.com)
+[Portfolio](https://bhuvanesh-sudo.github.io/portfolio/) · [LinkedIn](https://linkedin.com/in/bhuvanesh-s-0vnu) · [Mail](mailto:bhuvan1107@gmail.com)

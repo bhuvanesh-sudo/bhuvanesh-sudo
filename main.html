@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhuvanesh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d0d;
+    --bg2: #151515;
+    --bg3: #1c1c1c;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --text: #e8e4dc;
+    --text2: #8a8580;
+    --text3: #5a5652;
+    --accent: #c8a96e;
+    --accent2: #8fb38a;
+    --red: #c97a6e;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+
+  html { background: var(--bg); color: var(--text); font-family: var(--sans); }
+
+  body {
+    min-height: 100vh;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 32px 120px;
+  }
+
+  /* grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  * { position: relative; z-index: 1; }
+
+  /* header */
+  .header { margin-bottom: 80px; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fade-up 0.6s ease forwards;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(48px, 8vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fade-up 0.6s ease 0.1s forwards;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .tagline {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text2);
+    max-width: 520px;
+    opacity: 0;
+    animation: fade-up 0.6s ease 0.2s forwards;
+  }
+
+  .links {
+    display: flex;
+    gap: 24px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fade-up 0.6s ease 0.3s forwards;
+  }
+
+  .links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text3);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .links a:hover { color: var(--accent); }
+
+  .links a svg { width: 13px; height: 13px; opacity: 0.6; }
+
+  /* divider */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 64px 0;
+  }
+
+  /* section label */
+  .section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 32px;
+  }
+
+  /* project cards */
+  .projects { display: flex; flex-direction: column; gap: 2px; }
+
+  .project-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: start;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+    opacity: 0;
+    animation: fade-up 0.5s ease forwards;
+  }
+
+  .project-card:hover {
+    background: var(--bg3);
+    border-color: var(--border2);
+  }
+
+  .project-card:nth-child(1) { animation-delay: 0.1s; }
+  .project-card:nth-child(2) { animation-delay: 0.15s; }
+  .project-card:nth-child(3) { animation-delay: 0.2s; }
+  .project-card:nth-child(4) { animation-delay: 0.25s; }
+
+  .project-meta { min-width: 0; }
+
+  .project-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .project-type {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text3);
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .project-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text2);
+    margin: 10px 0 16px;
+    max-width: 520px;
+  }
+
+  .project-stat {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent2);
+    margin-bottom: 14px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.04);
+    color: var(--text3);
+    border: 1px solid var(--border);
+    letter-spacing: 0.03em;
+  }
+
+  .arrow {
+    color: var(--text3);
+    font-size: 18px;
+    margin-top: 4px;
+    transition: transform 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .project-card:hover .arrow {
+    transform: translate(3px, -3px);
+    color: var(--accent);
+  }
+
+  /* stack section */
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2px;
+  }
+
+  .stack-group {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 22px;
+  }
+
+  .stack-group-name {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .stack-items { display: flex; flex-direction: column; gap: 6px; }
+
+  .stack-item {
+    font-size: 13px;
+    color: var(--text2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .stack-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--border2);
+    flex-shrink: 0;
+  }
+
+  /* contact */
+  .contact-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text2);
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    letter-spacing: 0.05em;
+  }
+
+  .contact-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(200,169,110,0.05);
+  }
+
+  .contact-link.primary {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
+  .contact-link.primary:hover {
+    background: transparent;
+    color: var(--accent);
+  }
+
+  /* footer note */
+  .footnote {
+    margin-top: 80px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text3);
+    letter-spacing: 0.08em;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 560px) {
+    body { padding: 48px 20px 80px; }
+    .project-card { grid-template-columns: 1fr; padding: 22px 20px; }
+    .arrow { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <p class="eyebrow">Computer Science — Amrita Vishwa Vidyapeetham</p>
+  <h1><em>Bhuvanesh</em></h1>
+  <p class="tagline">I build systems with real constraints — scheduling engines, trustless protocols, and full-stack tools that solve problems worth solving.</p>
+  <nav class="links">
+    <a href="https://bhuvanesh-sudo.github.io/portfolio/">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="14" height="14" rx="1"/><path d="M5 8h6M8 5l3 3-3 3"/></svg>
+      portfolio
+    </a>
+    <a href="https://github.com/bhuvanesh-sudo">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      github
+    </a>
+    <a href="https://linkedin.com/in/bhuvanesh-s-0vnu">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+      linkedin
+    </a>
+    <a href="mailto:bhuvan1107@gmail.com">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="1"/><path d="M1 4l7 5 7-5"/></svg>
+      bhuvan1107@gmail.com
+    </a>
+  </nav>
+</header>
+
+<div class="divider"></div>
+
+<section>
+  <p class="section-label">// projects</p>
+  <div class="projects">
+
+    <a class="project-card" href="https://growing-plate.vercel.app" target="_blank">
+      <div class="project-meta">
+        <div class="project-name">
+          GrowingPlate
+          <span class="project-type">deployed</span>
+        </div>
+        <p class="project-desc">Pediatric nutrition tracker with age and sex-specific RDA targets across 30+ nutrients. PostgreSQL with Row Level Security enforces per-family data isolation. Zero-dependency TypeScript engine processes a full day's intake in under 50ms.</p>
+        <div class="project-stat">
+          <span>30+ nutrients tracked</span>
+          <span>&lt;50ms processing</span>
+          <span>4-tier severity alerts</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Zod</span>
+        </div>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="project-card" href="https://github.com/bhuvanesh-sudo/timetable-scheduler" target="_blank">
+      <div class="project-meta">
+        <div class="project-name">
+          Schedula
+          <span class="project-type">open source</span>
+        </div>
+        <p class="project-desc">Constraint-satisfaction backtracking engine that generates clash-free university timetables for 150+ courses and 30+ rooms in under 5 seconds. Tri-tier RBAC, audit logging, semester rollover, and 85%+ pytest coverage.</p>
+        <div class="project-stat">
+          <span>150+ courses</span>
+          <span>&lt;5s generation</span>
+          <span>85%+ test coverage</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Django</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">React</span>
+          <span class="tag">pytest</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="project-card" href="https://github.com/bhuvanesh-sudo/deadman-switch" target="_blank">
+      <div class="project-meta">
+        <div class="project-name">
+          KeepAlive
+          <span class="project-type">web3</span>
+        </div>
+        <p class="project-desc">Trustless on-chain inheritance protocol. A ping() call resets the time-lock; silence past the epoch lets a beneficiary claim() release funds — no lawyers, no custodians, no single point of failure. 100% branch coverage.</p>
+        <div class="project-stat">
+          <span>100% branch coverage</span>
+          <span>20+ unit tests</span>
+          <span>gas-optimised</span>
+        </div>
+        <div class="tags">
+          <span class="tag">Solidity</span>
+          <span class="tag">Hardhat</span>
+          <span class="tag">Ethers.js</span>
+          <span class="tag">Mocha/Chai</span>
+        </div>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="project-card" href="https://github.com/23CSE362-edge-computing-2025-26-odd/capstone-project-20_edgelords" target="_blank">
+      <div class="project-meta">
+        <div class="project-name">
+          Smart Braking System
+          <span class="project-type">edge / embedded</span>
+        </div>
+        <p class="project-desc">Dual-layer collision avoidance on ESP32-CAM. Ultrasonic sensor handles sub-100ms braking; a cloud-hosted YOLOv8 CNN with 92%+ validation accuracy classifies live frames for steering decisions.</p>
+        <div class="project-stat">
+          <span>&lt;100ms response</span>
+          <span>92%+ CNN accuracy</span>
+          <span>dual-layer detection</span>
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">YOLOv8</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">ESP32</span>
+        </div>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <p class="section-label">// stack</p>
+  <div class="stack-grid">
+    <div class="stack-group">
+      <p class="stack-group-name">languages</p>
+      <div class="stack-items">
+        <span class="stack-item"><span class="stack-dot"></span>Python</span>
+        <span class="stack-item"><span class="stack-dot"></span>TypeScript</span>
+        <span class="stack-item"><span class="stack-dot"></span>JavaScript</span>
+        <span class="stack-item"><span class="stack-dot"></span>C / C++</span>
+        <span class="stack-item"><span class="stack-dot"></span>SQL</span>
+        <span class="stack-item"><span class="stack-dot"></span>Solidity</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <p class="stack-group-name">frontend</p>
+      <div class="stack-items">
+        <span class="stack-item"><span class="stack-dot"></span>React</span>
+        <span class="stack-item"><span class="stack-dot"></span>Next.js</span>
+        <span class="stack-item"><span class="stack-dot"></span>Tailwind CSS</span>
+        <span class="stack-item"><span class="stack-dot"></span>shadcn/ui</span>
+        <span class="stack-item"><span class="stack-dot"></span>Framer Motion</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <p class="stack-group-name">backend</p>
+      <div class="stack-items">
+        <span class="stack-item"><span class="stack-dot"></span>Django / DRF</span>
+        <span class="stack-item"><span class="stack-dot"></span>FastAPI</span>
+        <span class="stack-item"><span class="stack-dot"></span>Node.js</span>
+        <span class="stack-item"><span class="stack-dot"></span>Express.js</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <p class="stack-group-name">data & infra</p>
+      <div class="stack-items">
+        <span class="stack-item"><span class="stack-dot"></span>PostgreSQL</span>
+        <span class="stack-item"><span class="stack-dot"></span>Supabase</span>
+        <span class="stack-item"><span class="stack-dot"></span>MongoDB</span>
+        <span class="stack-item"><span class="stack-dot"></span>Docker</span>
+        <span class="stack-item"><span class="stack-dot"></span>GitHub Actions</span>
+      </div>
+    </div>
+    <div class="stack-group">
+      <p class="stack-group-name">web3 & edge</p>
+      <div class="stack-items">
+        <span class="stack-item"><span class="stack-dot"></span>Hardhat</span>
+        <span class="stack-item"><span class="stack-dot"></span>Ethers.js</span>
+        <span class="stack-item"><span class="stack-dot"></span>ESP32</span>
+        <span class="stack-item"><span class="stack-dot"></span>PyTorch</span>
+        <span class="stack-item"><span class="stack-dot"></span>YOLOv8</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <p class="section-label">// contact</p>
+  <div class="contact-row">
+    <a class="contact-link primary" href="mailto:bhuvan1107@gmail.com">email me</a>
+    <a class="contact-link" href="https://bhuvanesh-sudo.github.io/portfolio/" target="_blank">portfolio</a>
+    <a class="contact-link" href="https://linkedin.com/in/bhuvanesh-s-0vnu" target="_blank">linkedin</a>
+    <a class="contact-link" href="https://github.com/bhuvanesh-sudo" target="_blank">github</a>
+  </div>
+</section>
+
+<p class="footnote">CS undergrad — Amrita Vishwa Vidyapeetham — graduating late 2027</p>
+
+</body>
+</html>

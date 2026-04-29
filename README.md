@@ -1,31 +1,35 @@
-# Hi, I'm Bhuvanesh
+# Bhuvanesh.
 
-I'm a Computer Science undergraduate focused on building systems that deal with **real world discrepancies, sometimes convulated and eccentric ideas**. I prefer projects that solve real problems, model real-world constraints, or explore non-trivial design tradeoffs.
-
----
-
-## What I'm Working On
-- Intelligent scheduling systems that model institutional constraints   
-- Experimental tools and applications with social impact  
-- Full-stack and systems-oriented side projects
-
-## Recent work includes: 
-- Blockchain-based supply chain traceability  
-- Non-custodial digital inheritance protocols  
-- Assistive web applications and experimental chatbot(s)
+Computer Science undergraduate building systems with real constraints — scheduling engines, trustless protocols, and full-stack tools that solve problems worth solving.
 
 ---
 
-## Tools & Technologies
-- **Languages:** Python, JavaScript, TypeScript, Solidity  
-- **Web:** HTML, CSS, Node.js, React.js, Next.js  
-- **Blockchain:** Ethereum, Smart Contracts  
-- **Systems & Dev:** Linux, Git, Docker  
-- **Concepts:** Algorithms, Data Structures, Decentralized Systems, Edge Intelligence
+## Projects
+
+**[GrowingPlate](https://growing-plate.vercel.app)** — Pediatric nutrition tracker with age/sex-specific RDA targets, Row Level Security, and a zero-dependency TypeScript nutrition engine with four-tier severity alerts.
+`Next.js` `Supabase` `PostgreSQL` `TypeScript`
+
+**[Schedula](https://github.com/bhuvanesh-sudo/timetable-scheduler)** — Constraint-satisfaction backtracking engine that generates clash-free university timetables for 150+ courses in under 5 seconds. Full RBAC, audit logging, CI/CD.
+`Django` `React` `PostgreSQL` `pytest` `GitHub Actions`
+
+**[KeepAlive](https://github.com/bhuvanesh-sudo/deadman-switch)** — Trustless on-chain inheritance protocol. A `ping()` resets the time-lock; silence past the epoch lets a beneficiary `claim()` — no lawyers, no custodians.
+`Solidity` `Hardhat` `Ethers.js` `Mocha/Chai`
+
+**Edge-Based Smart Braking System** — Dual-layer collision avoidance on ESP32-CAM: ultrasonic sensor for sub-100ms braking, YOLOv8 CNN (92%+ accuracy) for steering decisions.
+`C++` `Python` `FastAPI` `YOLOv8` `PyTorch`
 
 ---
 
-## Reach Me through my socials!
+## Stack
+
+**Languages:** Python, JavaScript, TypeScript, C, C++, SQL, Solidity  
+**Frontend:** React, Next.js, Tailwind CSS, shadcn/ui  
+**Backend:** Django, FastAPI, Node.js, Express.js  
+**Data & Infra:** PostgreSQL, MongoDB, Supabase, Docker, Git, CI/CD  
+**Web3 & Edge:** Hardhat, Ethers.js, ESP32, PyTorch  
 
 ---
 
+## Contact
+
+[Portfolio](https://bhuvanesh-sudo.github.io/portfolio/) · [LinkedIn](https://linkedin.com/in/bhuvanesh-s-0vnu) · [bhuvan1107@gmail.com](mailto:bhuvan1107@gmail.com)

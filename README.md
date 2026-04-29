@@ -15,7 +15,7 @@ Computer Science undergraduate building systems with real constraints — schedu
 **[KeepAlive](https://github.com/bhuvanesh-sudo/deadman-switch)** — Trustless on-chain inheritance protocol. A `ping()` resets the time-lock; silence past the epoch lets a beneficiary `claim()` — no lawyers, no custodians.
 `Solidity` `Hardhat` `Ethers.js` `Mocha/Chai`
 
-**Edge-Based Smart Braking System** — Dual-layer collision avoidance on ESP32-CAM: ultrasonic sensor for sub-100ms braking, YOLOv8 CNN (92%+ accuracy) for steering decisions.
+**[Edge-Based Smart Braking System](https://github.com/23CSE362-edge-computing-2025-26-odd/capstone-project-20_edgelords)** — Dual-layer collision avoidance on ESP32-CAM: ultrasonic sensor for sub-100ms braking, YOLOv8 CNN (92%+ accuracy) for steering decisions.
 `C++` `Python` `FastAPI` `YOLOv8` `PyTorch`
 
 ---

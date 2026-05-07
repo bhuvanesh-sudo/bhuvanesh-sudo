@@ -25,7 +25,7 @@ Computer Science undergraduate building systems with real constraints — schedu
 **Languages:** Python, JavaScript, TypeScript, C, C++, SQL, Solidity  
 **Frontend:** React, Next.js, Tailwind CSS, shadcn/ui  
 **Backend:** Django, FastAPI, Node.js, Express.js  
-**Data & Infra:** PostgreSQL, LangChain, FAISS, MongoDB, Supabase, Docker, Git, CI/CD  
+**Data & Infra:** PostgreSQL, LangChain, MongoDB, Supabase, FAISS, Docker, Git, CI/CD  
 **Web3 & Edge:** Hardhat, Ethers.js, ESP32, PyTorch  
 
 ---

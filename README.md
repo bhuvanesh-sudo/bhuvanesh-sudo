@@ -6,8 +6,7 @@ Computer Science undergraduate building systems on the fly. Built scheduling eng
 
 ## Projects
 
-**[Legal RAG](https://github.com/bhuvanesh-sudo/leg-rag)** — Contract Intelligence System — Retrieval-augmented legal assistant combining FAISS vector search with cross-encoder reranking for high-precision clause retrieval, plus semantic contract diffing to flag material changes between document versions.
-`Python` `FAISS` `LangChain` `Llama 3.3-70B` `Groq`
+**[Legal RAG](https://github.com/bhuvanesh-sudo/leg-rag)** —  Retrieval-augmented legal assistant combining FAISS vector search with cross-encoder reranking for high-precision clause retrieval, plus semantic contract diffing to flag material changes between document versions. `Python` `FAISS` `LangChain` `Llama 3.3-70B` `Groq`
 
 **[GrowingPlate](https://growing-plate.vercel.app)** — Pediatric nutrition tracker with age/sex-specific RDA targets, Row Level Security, and a zero-dependency TypeScript nutrition engine with four-tier severity alerts.
 `Next.js` `Supabase` `PostgreSQL` `TypeScript`

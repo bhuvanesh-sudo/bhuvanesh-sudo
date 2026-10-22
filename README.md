@@ -1,23 +1,37 @@
-# Bhuvanesh.
+# Bhuvanesh
 
 Computer Science undergraduate building systems on the fly. Built scheduling engines, trustless protocols, and full-stack tools that solve problems worth solving.
 
 ---
 
+## Currently Working On
+
+**[Turncoat-SDN](https://github.com/bhuvanesh-sudo/turncoat-sdn)** — Building a reproducible benchmark for Zero Trust SDN load balancing under delayed-onset attacks, using network simulation, trust-aware edge selection, and comparative evaluation of load-balancing strategies.
+
+`Python` `NumPy` `SciPy` `pytest` `SDN` `Zero Trust`
+
+---
+
 ## Projects
 
-**[Legal RAG](https://github.com/bhuvanesh-sudo/leg-rag)** —  Retrieval-augmented legal assistant combining FAISS vector search with cross-encoder reranking for high-precision clause retrieval, plus semantic contract diffing to flag material changes between document versions. `Python` `FAISS` `LangChain` `Llama 3.3-70B` `Groq`
+**[Legal RAG](https://github.com/bhuvanesh-sudo/leg-rag)** — Retrieval-augmented legal assistant combining FAISS vector search with cross-encoder reranking for high-precision clause retrieval, plus semantic contract diffing to flag material changes between document versions.
+
+`Python` `FAISS` `LangChain` `Llama 3.3-70B` `Groq`
 
 **[GrowingPlate](https://growing-plate.vercel.app)** — Pediatric nutrition tracker with age/sex-specific RDA targets, Row Level Security, and a zero-dependency TypeScript nutrition engine with four-tier severity alerts.
+
 `Next.js` `Supabase` `PostgreSQL` `TypeScript`
 
 **[Schedula](https://github.com/bhuvanesh-sudo/timetable-scheduler)** — Constraint-satisfaction backtracking engine that generates clash-free university timetables for 150+ courses in under 5 seconds. Full RBAC, audit logging, CI/CD.
+
 `Django` `React` `PostgreSQL` `pytest` `GitHub Actions`
 
 **[KeepAlive](https://github.com/bhuvanesh-sudo/deadman-switch)** — Trustless on-chain inheritance protocol. A `ping()` resets the time-lock; silence past the epoch lets a beneficiary `claim()` — no lawyers, no custodians.
+
 `Solidity` `Hardhat` `Ethers.js` `Mocha/Chai`
 
 **[Edge-Based Smart Braking System](https://github.com/23CSE362-edge-computing-2025-26-odd/capstone-project-20_edgelords)** — Dual-layer collision avoidance on ESP32-CAM: ultrasonic sensor for sub-100ms braking, YOLOv8 CNN (92%+ accuracy) for steering decisions.
+
 `C++` `Python` `FastAPI` `YOLOv8` `PyTorch`
 
 ---
@@ -27,8 +41,9 @@ Computer Science undergraduate building systems on the fly. Built scheduling eng
 **Languages:** Python, JavaScript, TypeScript, C, C++, SQL, Solidity  
 **Frontend:** React, Next.js, Tailwind CSS, shadcn/ui  
 **Backend:** Django, FastAPI, Node.js, Express.js  
-**Data & Infra:** PostgreSQL, LangChain, MongoDB, Supabase, FAISS, Docker, Git, CI/CD  
-**Web3 & Edge:** Hardhat, Ethers.js, ESP32, PyTorch  
+**Data & AI:** PostgreSQL, MongoDB, Supabase, FAISS, LangChain, NumPy, SciPy, PyTorch  
+**Infrastructure & Testing:** Docker, Git, GitHub Actions, CI/CD, pytest  
+**Web3 & Systems:** Solidity, Hardhat, Ethers.js, SDN, Zero Trust, ESP32, Edge AI
 
 ---
 

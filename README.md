@@ -1,18 +1,15 @@
 # Bhuvanesh
 
-Computer Science undergraduate building systems on the fly. Built scheduling engines, trustless protocols, and full-stack tools that solve problems worth solving.
+Computer Science undergraduate building systems on the fly. Built scheduling engines, generative AI and full-stack tools that solve problems worth solving.
 
 ---
 
-## Currently Working On
+
+## Projects
 
 **[Turncoat-SDN](https://github.com/bhuvanesh-sudo/turncoat-sdn)** — Building a reproducible benchmark for Zero Trust SDN load balancing under delayed-onset attacks, using network simulation, trust-aware edge selection, and comparative evaluation of load-balancing strategies.
 
 `Python` `NumPy` `SciPy` `pytest` `SDN` `Zero Trust`
-
----
-
-## Projects
 
 **[Legal RAG](https://github.com/bhuvanesh-sudo/leg-rag)** — Retrieval-augmented legal assistant combining FAISS vector search with cross-encoder reranking for high-precision clause retrieval, plus semantic contract diffing to flag material changes between document versions.
 

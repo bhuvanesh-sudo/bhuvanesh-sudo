@@ -4,20 +4,23 @@ Computer Science undergraduate building systems on the fly. Built scheduling eng
 
 ---
 
-
 ## Projects
 
-**[Turncoat-SDN](https://github.com/bhuvanesh-sudo/turncoat-sdn)** — Building a reproducible benchmark for Zero Trust SDN load balancing under delayed-onset attacks, using network simulation, trust-aware edge selection, and comparative evaluation of load-balancing strategies.
+**[TypeFaze](https://github.com/bhuvanesh-sudo/typefaze)** — Draw five letters, get a whole font. A 13.5M-parameter flow-matching model, trained from scratch on 3,500+ Google Fonts, generates the remaining 47 glyphs in your style. It runs entirely in the browser via ONNX Runtime Web (WebGPU) and exports an installable `.otf`. 
 
-`Python` `NumPy` `SciPy` `pytest` `SDN` `Zero Trust`
+`PyTorch` `ONNX Runtime Web` `React` `TypeScript` `opentype.js`
+
+**[GrowingPlate](https://growing-plate.vercel.app)** — Pediatric nutrition tracker with age/sex-specific RDA targets, Row Level Security, and a zero-dependency TypeScript nutrition engine with four-tier severity alerts.
+
+`Next.js` `Supabase` `PostgreSQL` `TypeScript`
 
 **[Legal RAG](https://github.com/bhuvanesh-sudo/leg-rag)** — Retrieval-augmented legal assistant combining FAISS vector search with cross-encoder reranking for high-precision clause retrieval, plus semantic contract diffing to flag material changes between document versions.
 
 `Python` `FAISS` `LangChain` `Llama 3.3-70B` `Groq`
 
-**[GrowingPlate](https://growing-plate.vercel.app)** — Pediatric nutrition tracker with age/sex-specific RDA targets, Row Level Security, and a zero-dependency TypeScript nutrition engine with four-tier severity alerts.
+**[Turncoat-SDN](https://github.com/bhuvanesh-sudo/turncoat-sdn)** — A reproducible benchmark for Zero Trust SDN load balancing under delayed-onset attacks, using network simulation, trust-aware edge selection, and comparative evaluation of load-balancing strategies.
 
-`Next.js` `Supabase` `PostgreSQL` `TypeScript`
+`Python` `NumPy` `SciPy` `pytest` `SDN` `Zero Trust`
 
 **[Schedula](https://github.com/bhuvanesh-sudo/timetable-scheduler)** — Constraint-satisfaction backtracking engine that generates clash-free university timetables for 150+ courses in under 5 seconds. Full RBAC, audit logging, CI/CD.
 
@@ -36,14 +39,14 @@ Computer Science undergraduate building systems on the fly. Built scheduling eng
 ## Stack
 
 **Languages:** Python, JavaScript, TypeScript, C, C++, SQL, Solidity  
-**Frontend:** React, Next.js, Tailwind CSS, shadcn/ui  
+**Frontend:** React, Next.js, Astro, Tailwind CSS, shadcn/ui  
 **Backend:** Django, FastAPI, Node.js, Express.js  
-**Data & AI:** PostgreSQL, MongoDB, Supabase, FAISS, LangChain, NumPy, SciPy, PyTorch  
-**Infrastructure & Testing:** Docker, Git, GitHub Actions, CI/CD, pytest  
+**Data & AI:** PostgreSQL, MongoDB, Supabase, FAISS, LangChain, NumPy, SciPy, PyTorch, ONNX Runtime  
+**Infrastructure & Testing:** Docker, Git, GitHub Actions, CI/CD, pytest, Vitest  
 **Web3 & Systems:** Solidity, Hardhat, Ethers.js, SDN, Zero Trust, ESP32, Edge AI
 
 ---
 
 ## Contact
 
-[Portfolio](https://bhuvanesh-sudo.github.io/portfolio/) · [LinkedIn](https://linkedin.com/in/bhuvanesh-s-0vnu) · [Mail](mailto:bhuvan1107@gmail.com)
+[Portfolio](https://bv.is-a.dev) · [LinkedIn](https://linkedin.com/in/bhuvanesh-s-0vnu) · [Mail](mailto:bhuvan1107@gmail.com)
